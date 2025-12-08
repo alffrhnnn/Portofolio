@@ -1,0 +1,170 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+/* ===== HEADER ===== */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#222;
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+header h2{
+    margin:0;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* HAMBURGER */
+.hamburger{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    user-select:none;
+    position:relative;
+    z-index:1500;
+}
+
+/* ===== FLOATING MOBILE MENU OVERLAY ===== */
+#mobileOverlay {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:1400;
+    backdrop-filter: blur(3px);
+    animation: fadeIn .3s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity:0;} 
+    to {opacity:1;}
+}
+
+/* MENU BOX */
+#mobileNav {
+    background:#222;
+    padding:30px;
+    border-radius:20px;
+    width:70%;
+    max-width:300px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    text-align:center;
+    transform: translateY(-20px);
+    animation: slideDown .35s ease forwards;
+}
+
+@keyframes slideDown {
+    from {opacity:0; transform: translateY(-20px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+#mobileNav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:20px;
+}
+
+/* ===== HERO ===== */
+.hero{
+    height:80vh;
+    background:url('assets/bg.jpg') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:50px;
+    text-shadow:0px 3px 8px black;
+}
+
+/* ===== SECTION ===== */
+.section{
+    padding:80px 10%;
+}
+
+.about-box,
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* ==== SKILLS ==== */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.skill{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* ==== PRODUCTS ==== */
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.product{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.product img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    nav{ display:none; }
+    .hamburger{ display:block; }
+
+    .skills-grid,
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{ font-size:36px; }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alif Farhan Romadhani</title>
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <h2>Alif Farhan Romadhani</h2>
+    <div class="hamburger" onclick="openMenu()">☰</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Tentang</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#products">Produk</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+</header>
+
+<!-- ================= FLOATING MOBILE MENU ================= -->
+<div id="mobileOverlay" onclick="closeMenu()">
+    <div id="mobileNav" onclick="event.stopPropagation()">
+        <a onclick="closeMenu()" href="#home">Home</a>
+        <a onclick="closeMenu()" href="#about">Tentang</a>
+        <a onclick="closeMenu()" href="#skills">Keahlian</a>
+        <a onclick="closeMenu()" href="#products">Produk</a>
+        <a onclick="closeMenu()" href="#contact">Kontak</a>
+    </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+    <h1 data-aos="fade-up">Selamat Datang di Portfolio Saya</h1>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+    <h2 data-aos="fade-right">Tentang Saya</h2>
+    <div class="about-box" data-aos="fade-up">
+        <p>
+            Saya Alif Farhan Romadhani, seorang individu yang memiliki ketertarikan kuat pada pengembangan diri, 
+            kreativitas, dan dunia digital. Saya senang mempelajari hal baru, menjelajahi ide-ide yang inovatif, 
+            dan bekerja secara produktif untuk mencapai hasil yang optimal. Dalam berbagai aktivitas, saya dikenal 
+            sebagai pribadi yang komunikatif, mudah beradaptasi, serta mampu bekerja secara mandiri maupun dalam tim.
+            Saya selalu berusaha mengembangkan kemampuan berpikir kritis, komunikasi, dan pemecahan masalah. Bagi saya, 
+            setiap pengalaman adalah kesempatan untuk belajar dan tumbuh. Dengan karakter yang positif dan motivasi yang 
+            tinggi, saya siap menghadapi tantangan baru serta memberikan kontribusi terbaik di setiap kesempatan.
+        </p>
+    </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="section" id="skills">
+    <h2 data-aos="fade-right">Keahlian</h2>
+    <div class="skills-grid">
+        <div class="skill" data-aos="zoom-in">Bahasa Inggris (Pasif & Aktif)</div>
+        <div class="skill" data-aos="zoom-in">Pemrograman Dasar (CPP)</div>
+        <div class="skill" data-aos="zoom-in">Komputer (Excel, Word, PPT)</div>
+        <div class="skill" data-aos="zoom-in">Desain (Canva)</div>
+    </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="section" id="products">
+    <h2 data-aos="fade-right">Pengalaman Kerja</h2>
+    <div class="product-grid">
+        <div class="product" data-aos="fade-up">
+            <img src="assets/prod1.png">
+            <h3>Pt Gapura Angkasa (2019-2020)</h3>
+            <p>Bergerak di bidang pelayanan jasa, proses pembelian tiket hingga penumpang masuk ke dalam pesawat</p>
+        </div>
+
+        <div class="product" data-aos="fade-up">
+            <img src="assets/prod2.png">
+            <h3>PT Sumber Alfaria Trijaya Tbk (2022-2023)</h3>
+            <p>Melayani proses pembelian dan penjualan toko, memastikan kebersihan rak dan cek expired dalam waktu berkala</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+    <h2 data-aos="fade-right">Kontak</h2>
+    <div class="contact-box" data-aos="fade-up">
+        <p>Email: aliffarhanromadhani@gmail.com</p>
+        <p>WhatsApp: 089514979173</p>
+        <p>Instagram: @alffrhnnn</p>
+    </div>
+</section>
+
+<!-- SCRIPT AOS + MENU -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+
+function openMenu(){
+    document.getElementById("mobileOverlay").style.display = "flex";
+}
+
+function closeMenu(){
+    document.getElementById("mobileOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
