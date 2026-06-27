@@ -1,115 +1,247 @@
 <!DOCTYPE html>
+<!--
+    Menandakan bahwa dokumen ini menggunakan standar HTML5
+-->
+
 <html lang="id">
+<!--
+    Elemen utama pembungkus seluruh dokumen HTML
+    Atribut lang="id" menunjukkan bahwa bahasa konten adalah Bahasa Indonesia
+-->
+
 <head>
     <meta charset="UTF-8">
+    <!--
+        Menentukan encoding karakter UTF-8
+        Agar huruf, simbol, dan karakter khusus tampil dengan benar
+    -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        Mengatur skala tampilan agar responsif di berbagai perangkat,
+        khususnya mobile (smartphone & tablet)
+    -->
+
     <title>Alif Farhan Romadhani</title>
+    <!--
+        Judul halaman yang ditampilkan pada tab browser
+    -->
 
     <!-- STYLE -->
     <link rel="stylesheet" href="style.css">
+    <!--
+        Menghubungkan file CSS eksternal (style.css)
+        Digunakan untuk mengatur tampilan visual website
+    -->
 
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--
+        Menghubungkan library AOS (Animate On Scroll)
+        Digunakan untuk animasi ketika elemen muncul saat scroll
+    -->
 </head>
+
 <body>
+<!--
+    Seluruh konten yang tampil di layar pengguna berada di dalam tag body
+-->
 
 <!-- ================= HEADER ================= -->
 <header>
+    <!--
+        Bagian header berisi identitas dan navigasi utama website
+    -->
+
     <h2>Alif Farhan Romadhani</h2>
+    <!--
+        Judul nama pemilik website (branding / identitas)
+    -->
+
     <div class="hamburger" onclick="openMenu()">☰</div>
+    <!--
+        Ikon hamburger menu untuk tampilan mobile
+        onclick="openMenu()" memanggil fungsi JavaScript untuk membuka menu
+    -->
 
     <nav>
+        <!--
+            Navigasi utama website (menu desktop)
+        -->
         <a href="#home">Home</a>
         <a href="#about">Tentang</a>
         <a href="#skills">Keahlian</a>
         <a href="#products">Pengalaman Kerja</a>
         <a href="#contact">Kontak</a>
+        <!--
+            href="#id" berfungsi untuk scroll ke section dengan id terkait
+        -->
     </nav>
 </header>
 
 <!-- ================= FLOATING MOBILE MENU ================= -->
 <div id="mobileOverlay" onclick="closeMenu()">
+    <!--
+        Overlay menu mobile (layer transparan)
+        Klik area luar menu akan menutup menu
+    -->
+
     <div id="mobileNav" onclick="event.stopPropagation()">
+        <!--
+            Container menu mobile
+            event.stopPropagation() mencegah klik di dalam menu menutup overlay
+        -->
+
         <a onclick="closeMenu()" href="#home">Home</a>
         <a onclick="closeMenu()" href="#about">Tentang</a>
-        <a onclick="closeMenu()" href="#skills">Keahlian</a>
-        <a onclick="closeMenu()" href="#products">Pengalaman Kerja</a>
+        <a onclick="closeMenu()" href="#skills">Arc Nakama Mc</a>
+        <a onclick="closeMenu()" href="#products">Profile</a>
         <a onclick="closeMenu()" href="#contact">Kontak</a>
+        <!--
+            Setiap klik menu:
+            1. Scroll ke section tujuan
+            2. Menutup menu mobile
+        -->
     </div>
 </div>
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="home">
-    <h1 data-aos="fade-up">Selamat Datang di Portfolio Saya</h1>
+    <!--
+        Section hero adalah tampilan awal (landing section)
+    -->
+
+    <h1 data-aos="fade-up">Official Website NMC</h1>
+    <!--
+        data-aos="fade-up" memberi efek animasi naik saat discroll
+    -->
 </section>
 
 <!-- ================= ABOUT ================= -->
 <section class="section" id="about">
-    <h2 data-aos="fade-right">Tentang Saya</h2>
+    <!--
+        Section Tentang Saya
+    -->
+
+    <h2 data-aos="fade-right">Tentang Kami</h2>
+    <!--
+        Animasi muncul dari kanan saat discroll
+    -->
+
     <div class="about-box" data-aos="fade-up">
+        <!--
+            Box konten deskripsi diri
+        -->
         <p>
-            Saya Alif Farhan Romadhani, seorang individu yang memiliki ketertarikan kuat pada pengembangan diri, 
-            kreativitas, dan dunia digital. Saya senang mempelajari hal baru, menjelajahi ide-ide yang inovatif, 
-            dan bekerja secara produktif untuk mencapai hasil yang optimal. Dalam berbagai aktivitas, saya dikenal 
-            sebagai pribadi yang komunikatif, mudah beradaptasi, serta mampu bekerja secara mandiri maupun dalam tim.
-            Saya selalu berusaha mengembangkan kemampuan berpikir kritis, komunikasi, dan pemecahan masalah. Bagi saya, 
-            setiap pengalaman adalah kesempatan untuk belajar dan tumbuh. Dengan karakter yang positif dan motivasi yang 
-            tinggi, saya siap menghadapi tantangan baru serta memberikan kontribusi terbaik di setiap kesempatan.
+            <!--
+                Paragraf berisi profil singkat pemilik portfolio
+            -->
+                Nakama MC merupakan komunitas roleplay yang menggabungkan kultur Motorcycle Club dengan nilai persaudaraan, loyalitas, dan kreativitas. Dari dunia virtual hingga menjadi komunitas yang terus berkembang, Nakama MC hadir sebagai tempat untuk membangun identitas, cerita, dan pengalaman bersama.
         </p>
     </div>
 </section>
 
 <!-- ================= SKILLS ================= -->
 <section class="section" id="skills">
-    <h2 data-aos="fade-right">Keahlian</h2>
+    <!--
+        Section keahlian atau skill
+    -->
+
+    <h2 data-aos="fade-right">Arc Nakama Mc</h2>
+
     <div class="skills-grid">
+        <!--
+            Grid layout untuk daftar skill
+        -->
+
         <div class="skill" data-aos="zoom-in">Bahasa Inggris (Pasif & Aktif)</div>
         <div class="skill" data-aos="zoom-in">Pemrograman Dasar (CPP)</div>
         <div class="skill" data-aos="zoom-in">Komputer (Excel, Word, PPT)</div>
         <div class="skill" data-aos="zoom-in">Desain (Canva)</div>
+        <!--
+            Setiap skill memiliki animasi zoom saat muncul
+        -->
     </div>
 </section>
 
 <!-- ================= PRODUCTS ================= -->
 <section class="section" id="products">
-    <h2 data-aos="fade-right">Pengalaman Kerja</h2>
+    <!--
+        Section pengalaman kerja
+    -->
+
+    <h2 data-aos="fade-right">Profile</h2>
+
     <div class="product-grid">
+        <!--
+            Grid untuk menampilkan pengalaman kerja
+        -->
+
         <div class="product" data-aos="fade-up">
             <img src="assets/prod1.png">
+            <!--
+                Gambar logo / ilustrasi perusahaan
+            -->
             <h3>Pt Gapura Angkasa (2019-2020)</h3>
-            <p>Bergerak di bidang pelayanan jasa, proses pembelian tiket hingga penumpang masuk ke dalam pesawat</p>
+            <p>
+                Deskripsi pengalaman kerja
+            </p>
         </div>
 
         <div class="product" data-aos="fade-up">
             <img src="assets/prod2.png">
             <h3>PT Sumber Alfaria Trijaya Tbk (2022-2023)</h3>
-            <p>Melayani proses pembelian dan penjualan toko, memastikan kebersihan rak dan cek expired dalam waktu berkala</p>
+            <p>
+                Deskripsi pengalaman kerja
+            </p>
         </div>
     </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
 <section class="section" id="contact">
+    <!--
+        Section informasi kontak
+    -->
+
     <h2 data-aos="fade-right">Kontak</h2>
+
     <div class="contact-box" data-aos="fade-up">
+        <!--
+            Box berisi detail kontak
+        -->
         <p>Email: aliffarhanromadhani@gmail.com</p>
         <p>WhatsApp: 089514979173</p>
         <p>Instagram: @alffrhnnn</p>
     </div>
 </section>
 
-<!-- SCRIPT AOS + MENU -->
+<!-- ================= SCRIPT ================= -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!--
+    Memanggil file JavaScript AOS untuk animasi scroll
+-->
+
 <script>
-AOS.init();
+    AOS.init();
+    /*
+        Inisialisasi library AOS
+        Agar semua animasi data-aos dapat berjalan
+    */
 
-function openMenu(){
-    document.getElementById("mobileOverlay").style.display = "flex";
-}
+    function openMenu(){
+        /*
+            Menampilkan menu mobile
+        */
+        document.getElementById("mobileOverlay").style.display = "flex";
+    }
 
-function closeMenu(){
-    document.getElementById("mobileOverlay").style.display = "none";
-}
+    function closeMenu(){
+        /*
+            Menyembunyikan menu mobile
+        */
+        document.getElementById("mobileOverlay").style.display = "none";
+    }
 </script>
 
 </body>
